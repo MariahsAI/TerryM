@@ -7,9 +7,10 @@
 
 <!-- Open Graph / Link Preview Card -->
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://mariahsai.github.io/TerryM/forbes-mx1-magazine.html">
 <meta property="og:title" content="FORBES MX1 — The Exclusive Issue">
 <meta property="og:description" content="Living Without Limits. An exclusive glimpse into the world of those who define luxury by the moments they live.">
-<meta property="og:image" content="og-card.jpg">
+<meta property="og:image" content="https://mariahsai.github.io/TerryM/og-card.jpg">
 <meta property="og:image:width" content="838">
 <meta property="og:image:height" content="1480">
 
@@ -17,7 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="FORBES MX1 — The Exclusive Issue">
 <meta name="twitter:description" content="Living Without Limits. An exclusive glimpse into the world of those who define luxury by the moments they live.">
-<meta name="twitter:image" content="og-card.jpg">
+<meta name="twitter:image" content="https://mariahsai.github.io/TerryM/og-card.jpg">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -756,25 +757,224 @@
   }
 
   /* ===== RESPONSIVE ===== */
+
+  /* --- Tablet --- */
   @media (max-width: 1024px) {
     .editorial-intro { grid-template-columns: 1fr; gap: 40px; }
     .editorial-body { columns: 1; }
     .video-grid { grid-template-columns: 1fr; }
     .video-card:first-child .video-wrapper { aspect-ratio: 16/9; }
+    .video-card:first-child .video-card-info h3 { font-size: 1.5rem; }
     .stats-bar { grid-template-columns: repeat(2, 1fr); }
     .stat:nth-child(2) { border-right: none; }
+    .footer-cols { gap: 48px; }
   }
+
+  /* --- Mobile --- */
   @media (max-width: 768px) {
-    .nav { padding: 16px 24px; }
+    /* Nav */
+    .nav { padding: 14px 20px; }
+    .nav.scrolled { padding: 12px 20px; }
+    .nav-brand .forbes { font-size: 1.5rem; letter-spacing: 0.2em; }
+    .nav-brand .mx1 { font-size: 0.65rem; letter-spacing: 0.3em; }
     .nav-links { display: none; }
-    .hero-content { padding: 0 24px 60px; }
-    .editorial-intro { padding: 40px 24px; }
-    .video-feature { padding: 60px 24px; }
-    .pull-quote-section { padding: 60px 24px; }
-    .footer { padding: 60px 24px 30px; }
-    .footer-cols { flex-direction: column; gap: 30px; }
-    .divider { padding: 0 24px; margin: 50px 0; }
+
+    /* Hamburger menu */
+    .hamburger { display: flex !important; }
+    
+    .mobile-menu {
+      display: flex !important;
+    }
+    .mobile-menu.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    /* Hero */
+    .hero { min-height: 100svh; }
+    .hero-content { padding: 0 20px 50px; max-width: 100%; }
+    .hero-issue { font-size: 0.55rem; letter-spacing: 0.35em; margin-bottom: 16px; }
+    .hero-issue::before { width: 24px; }
+    .hero-headline { font-size: clamp(2.2rem, 10vw, 3.5rem); margin-bottom: 16px; }
+    .hero-sub { font-size: 1rem; line-height: 1.6; margin-bottom: 28px; }
+    .hero-cta { 
+      padding: 14px 28px; 
+      font-size: 0.65rem; 
+      letter-spacing: 0.2em;
+      /* Make tap target at least 44px */
+      min-height: 48px;
+    }
+    .hero-scroll-indicator { right: 20px; bottom: 20px; }
+
+    /* Ticker */
+    .ticker { padding: 12px 0; }
+    .ticker-item { font-size: 0.7rem; letter-spacing: 0.3em; padding: 0 24px; }
+
+    /* Editorial */
+    .editorial-intro { 
+      padding: 40px 20px; 
+      grid-template-columns: 1fr; 
+      gap: 32px; 
+    }
+    .editorial-intro .number { font-size: 5rem; }
+    .editorial-intro .quote { font-size: 0.95rem; padding-left: 16px; }
+    .editorial-body { 
+      columns: 1; 
+      font-size: 1rem; 
+      line-height: 1.8; 
+    }
+    .editorial-body .drop-cap::first-letter { font-size: 3.5rem; }
+
+    /* Divider */
+    .divider { padding: 0 20px; margin: 40px 0; }
+
+    /* Video section */
+    .video-feature { padding: 50px 20px; }
+    .video-feature-header { margin-bottom: 32px; }
+    .video-feature-header h2 { font-size: 1.8rem; }
+    .video-feature-header .subtitle { 
+      text-align: left; 
+      max-width: 100%; 
+      font-size: 0.6rem; 
+    }
+    .video-grid { gap: 20px; }
+    .video-card:first-child { grid-column: 1; }
+    .video-card:hover { transform: none; } /* Disable hover lift on touch */
+    .video-card-info { padding: 20px 20px 24px; }
+    .video-card-info h3 { font-size: 1.2rem; }
+    .video-card:first-child .video-card-info h3 { font-size: 1.3rem; }
+    .video-card-info p { font-size: 0.9rem; }
+    .video-play-btn { width: 56px; height: 56px; }
+    .video-play-btn svg { width: 18px; height: 18px; }
+
+    /* Pull quote */
+    .pull-quote-section { padding: 60px 20px; }
+    .pull-quote-section::before { font-size: 8rem; top: 10px; }
+    .pull-quote { font-size: 1.2rem; line-height: 1.6; }
+    .pull-quote-author { font-size: 0.6rem; letter-spacing: 0.3em; }
+
+    /* Stats */
     .stats-bar { grid-template-columns: 1fr 1fr; }
+    .stat { padding: 32px 20px; }
+    .stat:nth-child(2) { border-right: none; }
+    .stat:nth-child(4) { border-right: none; }
+    .stat-number { font-size: 2.2rem; }
+    .stat-label { font-size: 0.55rem; letter-spacing: 0.2em; }
+
+    /* Footer */
+    .footer { padding: 50px 20px 24px; }
+    .footer-top { margin-bottom: 36px; }
+    .footer-brand .logo { font-size: 1.8rem; }
+    .footer-cols { flex-direction: column; gap: 28px; }
+    .footer-cols .footer-col { }
+    .footer-col h4 { margin-bottom: 12px; }
+    .footer-col a { font-size: 0.75rem; margin-bottom: 8px; min-height: 36px; display: flex; align-items: center; }
+    .footer-bottom { 
+      flex-direction: column; 
+      gap: 8px; 
+      text-align: center;
+      font-size: 0.6rem;
+    }
+  }
+
+  /* --- Small phones --- */
+  @media (max-width: 400px) {
+    .nav { padding: 12px 16px; }
+    .nav-brand .forbes { font-size: 1.3rem; }
+    .hero-content { padding: 0 16px 40px; }
+    .hero-headline { font-size: 2rem; }
+    .hero-sub { font-size: 0.9rem; }
+    .editorial-intro { padding: 32px 16px; }
+    .editorial-intro .number { font-size: 4rem; }
+    .video-feature { padding: 40px 16px; }
+    .video-feature-header h2 { font-size: 1.5rem; }
+    .video-card-info { padding: 16px 16px 20px; }
+    .pull-quote-section { padding: 48px 16px; }
+    .pull-quote { font-size: 1.05rem; }
+    .stat { padding: 24px 12px; }
+    .stat-number { font-size: 1.8rem; }
+    .footer { padding: 40px 16px 20px; }
+  }
+
+  /* --- Fix for iOS safe areas --- */
+  @supports (padding: env(safe-area-inset-bottom)) {
+    .footer-bottom {
+      padding-bottom: calc(24px + env(safe-area-inset-bottom));
+    }
+    .hero { min-height: calc(100svh); }
+  }
+
+  /* === HAMBURGER MENU === */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    z-index: 1002;
+    -webkit-tap-highlight-color: transparent;
+    /* Increase tap target */
+    padding: 10px;
+    margin: -10px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--gold);
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,10,10,0.97);
+    backdrop-filter: blur(20px);
+    z-index: 1001;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+  }
+  .mobile-menu a {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.3em;
+    color: var(--off-white);
+    text-decoration: none;
+    transition: color 0.3s;
+    -webkit-tap-highlight-color: transparent;
+    padding: 8px 20px;
+  }
+  .mobile-menu a:hover,
+  .mobile-menu a:active {
+    color: var(--gold);
+  }
+  .mobile-menu .mobile-menu-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 8px;
   }
 </style>
 </head>
@@ -798,7 +998,19 @@
     <li><a href="#videos">Exclusives</a></li>
     <li><a href="#subscribe">Subscribe</a></li>
   </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-label">Navigation</div>
+  <a href="#cover" onclick="closeMenu()">Cover Story</a>
+  <a href="#features" onclick="closeMenu()">Features</a>
+  <a href="#videos" onclick="closeMenu()">Exclusives</a>
+  <a href="#subscribe" onclick="closeMenu()">Subscribe</a>
+</div>
 
 <!-- HERO SECTION -->
 <section class="hero" id="cover">
@@ -1004,7 +1216,7 @@
   // Nav scroll effect
   window.addEventListener('scroll', () => {
     document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
-  });
+  }, { passive: true });
 
   // Reveal on scroll
   const observer = new IntersectionObserver((entries) => {
@@ -1013,12 +1225,30 @@
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // Video toggle play/pause
+  // Hamburger menu
+  function toggleMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+    hamburger.classList.toggle('active');
+    menu.classList.toggle('open');
+    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
+  }
+  function closeMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('mobileMenu');
+    hamburger.classList.remove('active');
+    menu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Video toggle play/pause (works for both click and tap)
   function toggleVideo(card) {
     const video = card.querySelector('video');
+    if (!video) return;
+    
     if (video.paused) {
       // Pause all other videos
       document.querySelectorAll('.video-card video').forEach(v => {
@@ -1027,7 +1257,7 @@
           v.closest('.video-card').classList.remove('playing');
         }
       });
-      video.play();
+      video.play().catch(() => {}); // Catch autoplay restrictions gracefully
       card.classList.add('playing');
     } else {
       video.pause();
@@ -1035,11 +1265,16 @@
     }
   }
 
-  // Pause video on end
+  // Pause video on end — show play button again
   document.querySelectorAll('.video-card video').forEach(video => {
     video.addEventListener('ended', () => {
       video.closest('.video-card').classList.remove('playing');
     });
+  });
+
+  // Close mobile menu on resize to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) closeMenu();
   });
 </script>
 

@@ -1133,18 +1133,26 @@
       </div>
     </div>
 
-    <!-- Placeholder Card -->
-    <div class="video-card" style="opacity: 0.5; pointer-events: none;">
-      <div class="video-wrapper" style="aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; background: var(--dark-gray);">
-        <div style="text-align:center;">
-          <div style="font-family:'Bebas Neue',sans-serif; font-size:1.5rem; letter-spacing:0.2em; color:var(--mid-gray);">COMING SOON</div>
-          <div style="font-family:'DM Sans',sans-serif; font-size:0.65rem; letter-spacing:0.3em; color:var(--mid-gray); margin-top:8px;">MARCH 2026</div>
+    <!-- Video 3 -->
+    <div class="video-card" onclick="toggleVideo(this)">
+      <div class="video-wrapper">
+        <video poster="poster3.jpg" preload="metadata" playsinline>
+          <source src="video3.mp4" type="video/mp4">
+        </video>
+        <div class="video-play-btn">
+          <svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg>
         </div>
+        <div class="video-badge">NEW</div>
+        <div class="video-duration">0:14</div>
       </div>
       <div class="video-card-info">
-        <div class="category">To Be Announced</div>
-        <h3>The Next Chapter</h3>
-        <p>Stay tuned for the next installment of the Forbes MX1 film series.</p>
+        <div class="category">Beach & Freedom</div>
+        <h3>American Spirit — Sand, Surf & Sun</h3>
+        <p>Where the ocean meets the shore, and the spirit of freedom runs wild. A beachside moment that captures the MX1 energy in its purest form.</p>
+        <div class="meta">
+          <span>Film III</span>
+          <span>Feb 2026</span>
+        </div>
       </div>
     </div>
   </div>
@@ -1159,7 +1167,7 @@
 <!-- STATS BAR -->
 <div class="stats-bar reveal">
   <div class="stat">
-    <div class="stat-number">2</div>
+    <div class="stat-number">3</div>
     <div class="stat-label">Exclusive Films</div>
   </div>
   <div class="stat">

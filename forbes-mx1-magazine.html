@@ -11,8 +11,8 @@
 <meta property="og:title" content="FORBES MX1 — The Exclusive Issue">
 <meta property="og:description" content="Living Without Limits. An exclusive glimpse into the world of those who define luxury by the moments they live.">
 <meta property="og:image" content="https://mariahsai.github.io/TerryM/og-card.jpg">
-<meta property="og:image:width" content="838">
-<meta property="og:image:height" content="1480">
+<meta property="og:image:width" content="1164">
+<meta property="og:image:height" content="2200">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
@@ -1208,9 +1208,16 @@
 </footer>
 
 <script>
+  // Force scroll to top immediately
+  window.history.scrollRestoration = 'manual';
+  window.scrollTo(0, 0);
+
   // Loader
   window.addEventListener('load', () => {
-    setTimeout(() => document.getElementById('loader').classList.add('hidden'), 1200);
+    window.scrollTo(0, 0);
+    setTimeout(() => {
+      document.getElementById('loader').classList.add('hidden');
+    }, 1200);
   });
 
   // Nav scroll effect
